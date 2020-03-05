@@ -2,7 +2,7 @@
 
 ### Creational Design Pattern
 <ul>
-  <li>[Builder](https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java):</li>
+  <li>[GitHub Pages](https://pages.github.com/)</li>
   <li>[Simple Factory](https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java):</li>
   <li>[Factory Method](https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java):</li>
   <li>[Prototype](https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java):</li>
