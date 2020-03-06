@@ -29,7 +29,7 @@
 </table>
 
 <hr>
-Simple Factory is used to determine the object which will instantiate regarding its type by creating a static method in a only one defining class to create anything. It also needs only a static method but addition of new product means changing existing code
+Simple Factory is used to determine the object which will instantiate regarding its type by creating a static method in a only one defining class to create anything. It also needs only a static method but addition of new product means changing existing code.
 For example :
 
 ```
