@@ -12,11 +12,11 @@
   </tr>
   <tr>
     <td>Director</td>
-    <td></td>
+    <td>Use Builder to construct the object as it knows every steps of the way that the object is created</td>
   </tr>
   <tr>
     <td>Builder</td>
-    <td>Use Builder to construct the object as it knows every steps of the way that the object is created </td>
+    <td>Provide an interface to create the parts of the final object </td>
   </tr>
   <tr>
     <td>Concreate Builder</td>
