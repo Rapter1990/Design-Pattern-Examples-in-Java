@@ -1,4 +1,4 @@
-# Software Design Pattren Examples in Java
+# Software Design Pattern Examples in Java
 
 ### Creational Design Pattern
 <ul>
