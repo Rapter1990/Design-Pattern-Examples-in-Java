@@ -1,6 +1,6 @@
 ### Creational Design Pattern - Simple Factoy
 
-![Image description](https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java/blob/master/images/creational_builder.png)
+![Image description](https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java/blob/master/images/factory.png)
 
 <hr>
 <h2>Figure Information</h2>
@@ -11,32 +11,37 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td>Director</td>
-    <td>Use Builder to construct the object as it knows every steps of the way that the object is created</td>
+    <td>Client</td>
+    <td>Call simplefactoy class to create product </td>
   </tr>
   <tr>
-    <td>Builder</td>
-    <td>Provide an interface to create the parts of the final object </td>
-  </tr>
-  <tr>
-    <td>Concreate Builder</td>
-    <td>Create the parts of the final object and assemble them</td>
+    <td>SimpleFactory</td>
+    <td>Define a static method to get instance of product's subclass with respect to defined situation</td>
   </tr>
   <tr>
     <td>Product</td>
-    <td>It is a final object which we want to create in client side</td>
+    <td>The main of subclasses</td>
+  </tr>
+  <tr>
+    <td>Product A, Product B</td>
+    <td>Create an object in terms of its feature</td>
   </tr>
 </table>
 
 <hr>
-The aim of the usage of the builder is to follow steps with understandable functions to create object without having complicated in constructor part with uncertain variables. That means that creating object with parameters in main activity cannot be recognized from any user because of not figuring out variables like this shown belown.
+Simple Factory is used to determine the object which will instantiate regarding its type by creating a static method in a only one defining class to create anything. It also needs only a static method but addition of new product means changing existing code
 For example :
 
 ```
-Car car = new Car("Car Name",10,"Red"); 
+public class Factory{
+   public static Product getProduct(String type) {
+      if(type.equalsIgnoreCase("value1")) {
+              return new ProductA();
+      } else if (type.equalsIgnoreCase("value2") {
+              return new ProductB();
+      }
+        throw new IllegalArgumentException("Cannot find the criteria");
+   }
+}
 ```
 
-Therefore, we want to use more comprehensible methods for users to understand them and we use builder to create object like this shown belown.
-```
-Car car = carBuilder.withCarName("Car Name").withAge(10).withColor("Red");
-```
