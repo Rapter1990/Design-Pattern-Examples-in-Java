@@ -1,6 +1,6 @@
 ### Creational Design Pattern - Factory Method
 
-![Image description](https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java/blob/master/images/factory.png)
+![Image description](https://github.com/Rapter1990/Design-Pattren-Examples-in-Java/blob/master/images/factorymethod.png)
 
 <hr>
 <h2>Figure Information</h2>
