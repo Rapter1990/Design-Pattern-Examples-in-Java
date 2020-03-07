@@ -11,20 +11,20 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td>Client</td>
-    <td>Call simplefactoy class to create product </td>
-  </tr>
-  <tr>
-    <td>SimpleFactory</td>
-    <td>Define a static method to get instance of product's subclass with respect to defined situation</td>
-  </tr>
-  <tr>
     <td>Product</td>
-    <td>The main of subclasses</td>
+    <td>An abstarct class or interface of product which is created from factory method </td>
   </tr>
   <tr>
-    <td>Product A, Product B</td>
-    <td>Create an object in terms of its feature</td>
+    <td>Product A,B</td>
+    <td>A sublass which implements or extends product class</td>
+  </tr>
+  <tr>
+    <td>Creator</td>
+    <td>Define abstract factory method and extra factory method to create product </td>
+  </tr>
+  <tr>
+    <td>Creator A,B</td>
+    <td>Use factory method to get back one instance of creating product</td>
   </tr>
 </table>
 
