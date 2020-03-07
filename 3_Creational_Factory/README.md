@@ -30,6 +30,7 @@
 
 <hr>
 Factory Pattern is used to create each sub class concerning its main type separately via creator posing main type.Factory method needs a subclass per product subclass but it is used forfuture-proof. That means that there are a lot of vehicle to be defined in the application later so we can use it. For example :
+
 ```
 abstract class VehicleFactory{
     public Vehicle getVehicle() {
