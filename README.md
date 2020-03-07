@@ -7,4 +7,5 @@
   <li><a href="https://github.com/Rapter1990/Design-Pattren-Examples-in-Java/tree/master/3_Creational_Factory">Factory Method</a></li>
   <li><a href="https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java">Prototype</a></li>
   <li><a href="https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java">Abstract Factory</a></li>
+  <li><a href="https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java">Singleton</a></li>
 </ul>
