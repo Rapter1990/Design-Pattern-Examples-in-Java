@@ -12,15 +12,27 @@
   </tr>
   <tr>
     <td>Main Class</td>
-    <td>Create a instance of prototype object with using clone method </td>
+    <td>Create a FactoryProducer to construct AbstractFactory object with respect to its type </td>
   </tr>
   <tr>
-    <td>Prototype</td>
-    <td>Define a clone method to construct the same kind of its object</td>
+    <td>Factory Producer</td>
+    <td>Deterime whether type coming from main class to create an Abstarct Factory object</td>
   </tr>
   <tr>
-    <td>ConcreatePrototypeA, ConcreatePrototypeB</td>
-    <td>Implement clone method coming from its parent to create its clone </td>
+    <td>AbstractFactory</td>
+    <td>Define method to create Base object </td>
+  </tr>
+   <tr>
+    <td>UpperBaseFactory, LowerBaseFactory</td>
+    <td>Deterime whether type coming from Factory Producer to create a Base object </td>
+  </tr>
+   <tr>
+    <td>Base</td>
+    <td>Inferface for a type of Base object  </td>
+  </tr>
+  <tr>
+    <td>UpperBase, LowerBase</td>
+    <td>Implement Base interface to call functions defined in their parent class whose name is Base</td>
   </tr>
 </table>
 
