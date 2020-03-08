@@ -25,24 +25,60 @@
 </table>
 
 <hr>
-Prototype is a template of any object before the actual object is constructed. It means that it is based on creating duplicate object while keeping performance in constant. Therefore, it can create a number of instances of a class, which has almost same state or differs from some a few differences.  For example :
+Abstract Factory creates supereme factory constructing its subs factories. This factory is also called as factory of factories. Because it is considered to one of thethe best ways to create an object , is is focused on under creational design. For example :
 
 ```
-public abstract class ClassName implements Cloneable {
-    ....
-    
-    public Object clone() {
-      Object clone = null;
-      
-      try {
-         clone = super.clone();
-         
-      } catch (CloneNotSupportedException e) {
-         e.printStackTrace();
-      }
-      
-      return clone;
+public interface Base {
+   void function();
+}
+
+public class UpperBase implements Base {
+   @Override
+   public void function() {
+      System.out.println("UpperBase is called");
    }
 }
+
+public class LowerBase implements Base {
+   @Override
+   public void function() {
+      System.out.println("UpperBase is called");
+   }
+}
+
+public abstract class BaseFactory {
+   abstract Base getBase(String baseType) ;
+}
+
+public class UpperFactory extends AbstractFactory {
+   @Override
+   public Base getBase(String baseType){    
+      if(baseType.equalsIgnoreCase("UpperBase")){
+         return new UpperBase();         
+      } 
+      return null;
+   }
+}
+
+public class LowerFactory extends AbstractFactory {
+   @Override
+   public Base getBase(String baseType){    
+      if(baseType.equalsIgnoreCase("LowerBase")){
+         return new LowerBase();         
+      }
+      return null;
+   }
+}
+
+public class BaseProducer {
+   public static AbstractFactory getFactory(String factoryType){   
+      if(factoryType.equalsIgnoreCase("UpperFactory")){
+         return new UpperFactory();         
+      }else{
+         return new LowerFactory();
+      }
+   }
+}
+
 ```
 
