@@ -25,7 +25,7 @@
 </table>
 
 <hr>
-Prototype is a template of any object before the actual object is constructed. It means that it is based on creating duplicate object while keeping performance in constant. Therefore, it can create a number of instances of a class, which has almost same state or differs from some a few differences  For example :
+Prototype is a template of any object before the actual object is constructed. It means that it is based on creating duplicate object while keeping performance in constant. Therefore, it can create a number of instances of a class, which has almost same state or differs from some a few differences.  For example :
 
 ```
 public abstract class ClassName implements Cloneable {
