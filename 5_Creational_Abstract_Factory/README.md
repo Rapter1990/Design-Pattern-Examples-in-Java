@@ -1,6 +1,6 @@
 ### Creational Design Pattern - Abstract Factory
 
-![Image description](https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/blob/master/images/prototype.png)
+![Image description](https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/blob/master/images/abstract%20factory.png)
 
 <hr>
 <h2>Figure Information</h2>
