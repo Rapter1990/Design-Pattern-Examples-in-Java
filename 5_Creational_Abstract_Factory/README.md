@@ -37,7 +37,7 @@
 </table>
 
 <hr>
-Abstract Factory creates supereme factory constructing its subs factories. This factory is also called as factory of factories. Because it is considered to one of thethe best ways to create an object , is is focused on under creational design. For example :
+Abstract Factory creates supereme factory constructing its subs factories. This factory is also called as factory of factories. Because it is considered to one of thethe best ways to create an object , it is focused on under creational design. For example :
 
 ```
 public interface Base {
