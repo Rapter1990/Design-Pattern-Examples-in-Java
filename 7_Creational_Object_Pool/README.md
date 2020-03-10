@@ -12,15 +12,15 @@
   </tr>
   <tr>
     <td>ObjectPool</td>
-    <td>Provide a static method to get its static instance coming from Main</td>
+    <td>Provide a list of available objects and a collection of objects that have already been requested from the pool</td>
   </tr>
   <tr>
     <td>ReuablePool</td>
-    <td>Use it to get a SingletonObject object </td>
+    <td>it is held in the object pool because it is expensive or slow to instantiate </td>
   </tr>
   <tr>
     <td>Client</td>
-    <td>Use it to get a SingletonObject object </td>
+    <td>Use it to create an object of the ReuablePool type </td>
   </tr>
   
 </table>
