@@ -10,3 +10,14 @@
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/6_Creational_Singleton">Singleton</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/7_Creational_Object_Pool">Object Pool</a></li>
 </ul>
+
+### Structual Design Pattern
+<ul>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Adapter</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Bridge</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Decorater</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Composite</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Facade</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Flyweight</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Proxy</a></li>
+</ul>
