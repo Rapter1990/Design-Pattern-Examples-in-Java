@@ -11,19 +11,15 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td>SingletonObject</td>
+    <td>ObjectPool</td>
     <td>Provide a static method to get its static instance coming from Main</td>
   </tr>
   <tr>
-    <td>Main</td>
+    <td>ReuablePool</td>
     <td>Use it to get a SingletonObject object </td>
   </tr>
   <tr>
-    <td>Main</td>
-    <td>Use it to get a SingletonObject object </td>
-  </tr>
-  <tr>
-    <td>Main</td>
+    <td>Client</td>
     <td>Use it to get a SingletonObject object </td>
   </tr>
   
