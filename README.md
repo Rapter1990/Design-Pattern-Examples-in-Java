@@ -13,10 +13,10 @@
 
 ### Structual Design Pattern
 <ul>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Adapter</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Bridge</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Decorater</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Composite</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/8_Structural_Adapter">Adapter</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/9_Structural_Bridge">Bridge</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/10_Structural_Decorator">Decorater</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/11_Structural_Composite">Composite</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Facade</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Flyweight</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Proxy</a></li>
