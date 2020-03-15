@@ -1,4 +1,4 @@
-### Structuarl Design Pattern - Adapter
+### Structural Design Pattern - Adapter
 
 ![Image description](https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java/blob/master/images/adapter.png)
 
