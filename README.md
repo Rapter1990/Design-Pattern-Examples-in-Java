@@ -19,5 +19,5 @@
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/11_Structural_Composite">Composite</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/12_Structural_Facade">Facade</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/13_Structural_Flyweight">Flyweight</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Proxy</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/14_Structural_Proxy">Proxy</a></li>
 </ul>
