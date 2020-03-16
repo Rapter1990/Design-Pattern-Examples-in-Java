@@ -33,11 +33,11 @@ public class OracleDatabaseHelper {
 
 }
 
-public class MysqlHelper {
+public class MysqlDatabaseHelper {
 
 }
 
-public class PostgreHelper {
+public class PostgreDatabaseHelper {
 
 }
 
@@ -46,12 +46,15 @@ public class DatabaseFacadeHelper {
   public static void generateConnection(dbType){
     switch (dbType){
       case MYSQL:
+          new MysqlDatabaseHelper()
           ....
           break;
       case ORACLE:
+          new OracleDatabaseHelper()
           ....
           break;
       case POSTGRE:
+          new PostgreDatabaseHelper()
           ....
           break;    
     }    
