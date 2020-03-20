@@ -26,7 +26,7 @@
 <ul>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Chain of Responsibility</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Command</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Interpreter</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/17_Behavior_Interpreter">Interpreter</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Mediator</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/19_Behavior_Iterator">Iterator</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Memento</a></li>
@@ -35,5 +35,5 @@
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Strategy</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/24_Behavior_Template_Method">Template_Method</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Visitor</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Null Object</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/26_Behavior_Null_Object">Null Object</a></li>
 </ul>
