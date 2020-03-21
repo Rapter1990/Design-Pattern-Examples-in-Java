@@ -24,12 +24,12 @@
 
 ### Behaviour Design Pattern
 <ul>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Chain of Responsibility</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Command</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/15_Behavior_Chain_Of_Responsibility">Chain of Responsibility</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/16_Behavior_Command">Command</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/17_Behavior_Interpreter">Interpreter</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Mediator</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/18_Behavior_Mediator">Mediator</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/19_Behavior_Iterator">Iterator</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Memento</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/20_Behavior_Memento">Memento</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Observer</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/22_Behavior_State">State</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Strategy</a></li>
