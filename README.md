@@ -30,9 +30,9 @@
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/18_Behavior_Mediator">Mediator</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/19_Behavior_Iterator">Iterator</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/20_Behavior_Memento">Memento</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Observer</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/21_Behaviour_Observer">Observer</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/22_Behavior_State">State</a></li>
-  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java">Strategy</a></li>
+  <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/23_Behavior_Strategy">Strategy</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/24_Behavior_Template_Method">Template_Method</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/25_Behavior_Visitor">Visitor</a></li>
   <li><a href="https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/tree/master/26_Behavior_Null_Object">Null Object</a></li>
