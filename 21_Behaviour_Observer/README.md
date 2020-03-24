@@ -11,49 +11,93 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
-  </tr>
-  <tr>
     <td>Subject</td>
-    <td>Define interface used by client</td>
+    <td>Define interface to reigster one or more observers</td>
   </tr>
   <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
+    <td>ConcreteSubject</td>
+    <td>Send notification to observers when its state is changed</td>
   </tr>
   <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
+    <td>Observer</td>
+    <td>Define interface for objects getting notification when subject is changed</td>
+  </tr>
+  <tr>
+    <td>ConcreteObserver</td>
+    <td>Having a refernce for concrete observer</td>
   </tr>
   
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+
+This design pattern is used to define one-to-many dependency between objects and provide notification for each one in case of its change of state 
 
 For example :
 
 ```
-public interface Internet { 
 
-} 
+public interface Subject {
+    public void attach(Observer o);
+    public void detach(Observer o);
+    public void notifyUpdate(Message m);
+}
 
-public class RealInternet implements Internet { 
+public interface  Observer {
+    public void showMessage(Message m);
+}
+
+public class MessageSubscriberOne implements Observer {
 
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
+public class MessageContext implements Subject {
+
+	private List<Observer> observers = new ArrayList<>();
+	private final Object MUTEX = new Object();
+	private boolean changed;
+
+	public MessageContext() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void attach(Observer o) {
+		// TODO Auto-generated method stub
+		synchronized (MUTEX) {
+			if (!observers.contains(o))
+				observers.add(o);
+		}
+	}
+
+	@Override
+	public void detach(Observer o) {
+		// TODO Auto-generated method stub
+		synchronized (MUTEX) {
+			observers.remove(o);
+		}
+	}
+
+	@Override
+	public void notifyUpdate(Message m) {
+		// TODO Auto-generated method stub
+		this.changed=true;
+		synchronized (MUTEX) {
+			if (!changed)
+				return;
+			observers = new ArrayList<>(this.observers);
+			this.changed=false;
+		}
+		for (Observer obj : observers) {
+			obj.showMessage(m);
+		}
+	}
 }
 
-public class InternetService {
+public class Message {
 
-	private Internet internet;
-  ...
 }
-
 
 ```
