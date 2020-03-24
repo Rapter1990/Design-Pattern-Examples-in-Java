@@ -11,48 +11,74 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
+    <td>AbstractClass</td>
+    <td>Implement template methods and one or more abstract step methods</td>
   </tr>
   <tr>
-    <td>Subject</td>
-    <td>Define interface used by client</td>
-  </tr>
-  <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
-  </tr>
-  <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
+    <td>ConcreteClassA,ConcreteClassB</td>
+    <td>Implement it own step methods which are later called by template method</td>
   </tr>
   
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+
+This design pattern provides a template method including structure of methods
 
 For example :
 
 ```
-public interface Internet { 
+public abstract class HouseTemplate {
 
-} 
+	// template method
+	public final void buildHouse() {
+		houseTypeName();
+		buildStart();
+		placePillars();
+		constructWalls();
+		putWindows();
+		System.out.println("House is completely built.");
+	}
 
-public class RealInternet implements Internet { 
+	// default implementation
+	private void putWindows() {
+		System.out.println("Putting Glass Windows");
+	}
 
+	// methods to be implemented by subclasses
+	public abstract void constructWalls();
+
+	public abstract void placePillars();
+	
+	public abstract void houseTypeName();
+
+	private void buildStart() {
+		System.out.println("Constructing starts with cement,iron rods and sand");
+	}
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
-}
 
-public class InternetService {
+public class FarmHouse extends HouseTemplate {
 
-	private Internet internet;
-  ...
+	@Override
+	public void houseTypeName() {
+		// TODO Auto-generated method stub
+		System.out.println("FarmHouse");
+	}
+
+	@Override
+	public void constructWalls() {
+		// TODO Auto-generated method stub
+		System.out.println("Building Concrete Walls");
+	}
+
+	@Override
+	public void placePillars() {
+		// TODO Auto-generated method stub
+		System.out.println("Place Pillars to Farm House");
+	}
+
 }
 
 
