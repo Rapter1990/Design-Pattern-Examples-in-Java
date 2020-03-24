@@ -11,48 +11,45 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
+    <td>Context</td>
+    <td>Use strategy interface to provide operation</td>
   </tr>
   <tr>
-    <td>Subject</td>
-    <td>Define interface used by client</td>
+    <td>Strategy</td>
+    <td>Define interface to implement its methods</td>
   </tr>
   <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
-  </tr>
-  <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
+    <td>ConcreteStrategyA,ConcreteStrategyB</td>
+    <td>Implement the methods of Strategy</td>
   </tr>
   
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+This design pattern is used to encapsulate methods in seperate classes and each class having it methods is defined with the desired implmentation of method. 
 
 For example :
 
 ```
-public interface Internet { 
+public interface IPaymentStrategy {
+	public void pay(int amount);
+}
 
-} 
-
-public class RealInternet implements Internet { 
+public class CreditCardStrategy implements IPaymentStrategy{
 
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
+public class CashStrategy implements IPaymentStrategy{
+
 }
 
-public class InternetService {
+public class Product {
 
-	private Internet internet;
-  ...
+}
+
+public class ShoppingCart {
+
 }
 
 
