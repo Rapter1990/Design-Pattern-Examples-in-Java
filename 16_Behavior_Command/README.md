@@ -12,47 +12,52 @@
   </tr>
   <tr>
     <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
+    <td>Create concrete command and assign its receiver</td>
   </tr>
   <tr>
-    <td>Subject</td>
-    <td>Define interface used by client</td>
+    <td>Invoker</td>
+    <td>Excute command</td>
   </tr>
   <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
+    <td>Command</td>
+    <td>Define interface to execute the operation</td>
   </tr>
   <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
+    <td>Receiver</td>
+    <td>Perform operation defined in request</td>
+  </tr>
+  <tr>
+    <td>Concrete Command</td>
+    <td>Make a communication between receiver and action and implement execute operation coming from receiver</td>
   </tr>
   
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+This design pattern provides us with treating requests for operations and sending them o different kinds of code for later execution.
 
 For example :
 
 ```
-public interface Internet { 
-
-} 
-
-public class RealInternet implements Internet { 
+public interface ICommand {
 
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
+public class LightControl {
+
 }
 
-public class InternetService {
+public class TurnOffLightCommand implements ICommand {
 
-	private Internet internet;
-  ...
+}
+
+public class TurnOffLightCommand implements ICommand {
+
+}
+
+public class RemoteControl {
+     ICommand command;
 }
 
 
