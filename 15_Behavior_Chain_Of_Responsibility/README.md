@@ -12,48 +12,43 @@
   </tr>
   <tr>
     <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
+    <td>Deliver request to first object in defined chain</td>
   </tr>
   <tr>
-    <td>Subject</td>
-    <td>Define interface used by client</td>
+    <td>Handler</td>
+    <td>Define interface to handle with requests and implemets link to successor</td>
   </tr>
   <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
+    <td>ConcreteHandlerA,ConcreteHandlerB,ConcreteHandlerC</td>
+    <td>Handle requests if it can otherwise it delivers it to its successor</td>
   </tr>
-  <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
-  </tr>
-  
+ 
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+This design pattern is used when we want to seperate request from object tackling with request. Seperating request means that we want to give multiple objects to take a chance for handling with request. If the request can be handled, concretehandler processes this request otherwise it delivers its request to its successor.   
 
 For example :
 
 ```
-public interface Internet { 
-
-} 
-
-public class RealInternet implements Internet { 
+public class PlanetRequest {
 
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
+public interface IPlanet {
+
 }
 
-public class InternetService {
+public class MarsPlanet extends PlanetRequest implements IPlanet{
 
-	private Internet internet;
-  ...
 }
+
+public class VenusPlanet extends PlanetRequest implements IPlanet{
+
+}
+
+
 
 
 ```
