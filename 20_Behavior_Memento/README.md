@@ -11,49 +11,51 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
+    <td>Originator</td>
+    <td>Create a memento with its state</td>
   </tr>
   <tr>
-    <td>Subject</td>
-    <td>Define interface used by client</td>
+    <td>Memento</td>
+    <td>Store state of originator</td>
   </tr>
   <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
-  </tr>
-  <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
+    <td>CareTaker</td>
+    <td>Control memento storing its state</td>
   </tr>
   
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+This design pattern is used to take a snapshot of object's state in terms of its particular state
 
 For example :
 
 ```
-public interface Internet { 
+public class Document {
 
-} 
+        ....
 
-public class RealInternet implements Internet { 
-
+        // Memento
+	public DocumentMemento save(){
+		return new DocumentMemento(this.id, this.title, this.content);
+	}
+	
+	public void undoToLastSave(Object obj){
+		DocumentMemento memento = (DocumentMemento) obj;
+		this.id = memento.getId();
+		this.title = memento.getTitle();
+		this.content = memento.getContent();
+	}
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
+public class DocumentCareTaker {
+	private List<DocumentMemento> mementoList = new ArrayList<DocumentMemento>();
+	
+}	
+
+public class DocumentMemento {
+
 }
-
-public class InternetService {
-
-	private Internet internet;
-  ...
-}
-
 
 ```
