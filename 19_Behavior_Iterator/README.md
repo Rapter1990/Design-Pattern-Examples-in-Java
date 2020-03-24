@@ -12,47 +12,65 @@
   </tr>
   <tr>
     <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
+    <td>Use both aggregate and iterator</td>
   </tr>
   <tr>
-    <td>Subject</td>
-    <td>Define interface used by client</td>
+    <td>Aggregate</td>
+    <td>Define interface to create iterator</td>
   </tr>
   <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
+    <td>Iterator</td>
+    <td>Give interface to a role as if it was an iterator object and iterate elements of aggregate</td>
   </tr>
   <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
+    <td>ConcreteAggregate</td>
+    <td>Implements method to return object of iterator</td>
+  </tr>
+  <tr>
+    <td>ConcreteIterator</td>
+    <td>Implement iterator interface and has a state to remember its position</td>
   </tr>
   
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+This design pattern is used to iterate or give a sequential access to element of aggregate object. It also determines if there is an convenient lement of iterator to consume and give next one.
 
 For example :
 
 ```
-public interface Internet { 
-
-} 
-
-public class RealInternet implements Internet { 
+public abstract class Person {
 
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
+
+public class Employee extends Person{
+
 }
 
-public class InternetService {
+public interface Iterator<T> {
 
-	private Internet internet;
-  ...
+    void reset();   // reset to the first element
+    
+    T next();   // To get the next element
+ 
+    T currentItem();    // To retrieve the current element
+ 
+    boolean hasNext();  // To check whether there is any next element or not.
+}
+
+public interface List<T>{
+    Iterator<T> iterator();
+}
+
+
+public class EmployeeIterator implements Iterator<Employee> {
+
+}
+
+public class EmployeeList implements List<Employee>{
+
 }
 
 
