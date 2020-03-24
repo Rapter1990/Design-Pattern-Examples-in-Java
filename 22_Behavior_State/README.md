@@ -11,49 +11,50 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
+    <td>Context</td>
+    <td>Deliver operation method with current state to its concreteState class</td>
   </tr>
   <tr>
-    <td>Subject</td>
-    <td>Define interface used by client</td>
+    <td>State</td>
+    <td>Define interface for objects representing state of object</td>
   </tr>
   <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
+    <td>ConcreteStateA,ConcreteStateB</td>
+    <td>Representing a particular state of object</td>
   </tr>
-  <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
-  </tr>
-  
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+
+This design pattern is used to change the behaviour state of object in terms of the case of its state. 
 
 For example :
 
 ```
-public interface Internet { 
-
-} 
-
-public class RealInternet implements Internet { 
+public abstract class Gear implements Serializable{
 
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
+public interface GearState {
+	public void changeGear();
+	public void accelarate(int speed);
 }
 
-public class InternetService {
+public class FirstGear extends Gear implements GearState {
 
-	private Internet internet;
-  ...
 }
+
+public class SecondGear extends Gear implements GearState {
+
+}
+
+public class Vehicle implements GearState {
+
+	private GearState gear;
+	
+}	
+
 
 
 ```
