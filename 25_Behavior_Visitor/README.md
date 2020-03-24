@@ -11,49 +11,67 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
+    <td>Visitor</td>
+    <td>Define visit operation for each concrete class</td>
   </tr>
   <tr>
-    <td>Subject</td>
-    <td>Define interface used by client</td>
+    <td>ConcreteVisitorA,ConcreteVisitorB</td>
+    <td>Implement its own operations</td>
   </tr>
   <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
+    <td>ObjectStructure</td>
+    <td>Iterate elements</td>
   </tr>
   <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
+    <td>Element</td>
+    <td>Define accept operation</td>
+  </tr>
+  <tr>
+    <td>ElementA,ElementB</td>
+    <td>Implement accept operation and call visitor's method</td>
   </tr>
   
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+This design pattern is used to add new operations working on objects without changing and modifying class definations of all these objects. 
 
 For example :
 
 ```
-public interface Internet { 
-
-} 
-
-public class RealInternet implements Internet { 
-
+public interface Visitor {
+	public void visit(Visitable visitable);
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
+public interface Visitable {
+	public void accept(Visitor visitor);
 }
 
-public class InternetService {
-
-	private Internet internet;
-  ...
+public class Patient implements Visitable{
+	...
+	@Override
+	public void accept(Visitor visitor) {
+		// TODO Auto-generated method stub
+		visitor.visit(this);
+	}
 }
 
+public class Doctor implements Visitor{
+	...
+	@Override
+	public void visit(Visitable visitable) {
+		// TODO Auto-generated method stub
+		Patient patient = (Patient) visitable;
+		String nameOfPatient = patient.getName();
+		String healthStatus = patient.getHealthStatus();
+		
+		System.out.println("Doctor: '" + this.getName() + "' does the checkup of the patient: '"
+                + nameOfPatient + "' and Reported health "+ healthStatus +
+                "\n-----------------------------------------------------------");
+				
+	}
+}
 
+ 
 ```
