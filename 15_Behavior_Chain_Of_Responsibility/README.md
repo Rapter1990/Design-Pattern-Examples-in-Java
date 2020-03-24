@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td>Handler</td>
-    <td>Define interface to handle with requests and implemets link to successor</td>
+    <td>Define interface to handle with requests and implements link to successor</td>
   </tr>
   <tr>
     <td>ConcreteHandlerA,ConcreteHandlerB,ConcreteHandlerC</td>
