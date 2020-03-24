@@ -41,15 +41,12 @@ public interface IPlanet {
 }
 
 public class MarsPlanet extends PlanetRequest implements IPlanet{
-
+  private IPlanet handler;
 }
 
 public class VenusPlanet extends PlanetRequest implements IPlanet{
-
+  private IPlanet handler;
 }
-
-
-
 
 ```
 
