@@ -1,6 +1,6 @@
 ### Behavior Design Pattern - Chain Of Responsibility
 
-![Image description](https://github.com/Rapter1990/Software-Design-Pattren-Examples-in-Java/blob/master/images/proxy.png)
+![Image description](https://github.com/Rapter1990/Design-Pattern-Examples-in-Java/blob/master/images/chainofresponsibility.png)
 
 <hr>
 <h2>Figure Information</h2>
