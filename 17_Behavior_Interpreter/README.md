@@ -12,47 +12,44 @@
   </tr>
   <tr>
     <td>Client</td>
-    <td>Use Subject to create RealSubject and ProxySubject</td>
+    <td>Interpret operations</td>
   </tr>
   <tr>
-    <td>Subject</td>
-    <td>Define interface used by client</td>
+    <td>Context</td>
+    <td>Hold information needed by interpreter</td>
   </tr>
   <tr>
-    <td>RealSubject</td>
-    <td>Provides real implementaion of subject</td>
+    <td>Terminal Experssion</td>
+    <td>Implement interpret operation because of being leaf nodes</td>
   </tr>
   <tr>
-    <td>ProxySubject</td>
-    <td>Use a reference to RealSubject to provide actual functionality except for implementing same interface as a RealSubject</td>
+    <td>Non Terminal Expression</td>
+    <td>Contains other expressions</td>
+  </tr>
+  <tr>
+    <td>Abstract Expression</td>
+    <td>Interface for expression in tree and defines interpret operation</td>
   </tr>
   
 </table>
 
 <hr>
 Description:
-Proxy implements same interface as expected of real object and provides an object acting as a substitute for a real service object. It provides to create real object or it creates it when it is needed. It also controls to access objects method.  
+This design pattern is used to defne a language with rules. Each rule in the language interprets operation in the expression class. 
 
 For example :
 
 ```
-public interface Internet { 
-
-} 
-
-public class RealInternet implements Internet { 
+public interface Expression {
 
 }
 
-public class ProxyInternet implements Internet {
-  private Internet internet;
-  ....
+public class AndExpression implements Expression {
+
 }
 
-public class InternetService {
+public class CaseExpression implements Expression {
 
-	private Internet internet;
-  ...
 }
 
 
